@@ -1,0 +1,1 @@
+web: gunicorn GreenhouseIMS.wsgi --log-file -

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Create An Account{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="section">
+            
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card bg-light border-dark col-md-6">
+                <div class="card-body col-md-10">
+                    <form method="POST" class="form-group">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <button type="sumbit" class="btn btn-primary">Register</button>
+                    </form>
+                </div>
+                <div class="card-footer bg-light text-center">
+                    <p>Already have an account? Sign in <a href="{% url 'login' %}">here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
