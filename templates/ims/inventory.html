@@ -30,7 +30,11 @@
                             {% for item in item_list %}
                                 <tbody>
                                     <tr>
-                                        <td><input type="checkbox" value={{item.id}} id="defaultCheck1"></td>
+                                        <td>
+                                            {% if item.item_status == 'yes' %}
+                                                <input type="checkbox" value={{item.id}} id="defaultCheck1">
+                                            {% endif %}
+                                        </td>
                                         <th scope="row">{{ item.id }}</th>
                                         {% if item.item_status == 'yes' %}
                                             <td><span class="badge badge-pill badge-success">Yes</span></td>
