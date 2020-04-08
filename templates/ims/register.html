@@ -9,6 +9,7 @@
         <div class="row justify-content-center">
             <div class="card bg-light border-dark col-md-6">
                 <div class="card-body col-md-10">
+                    <legend class="border-bottom mb-3">Create an Account</legend>
                     <form method="POST" class="form-group">
                         {% csrf_token %}
                         {{ form|crispy }}

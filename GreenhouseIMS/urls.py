@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.urls import include, path
 from ims import views as v
 
+
 urlpatterns = [
+    path("home", v.home, name="home"),
     path("inventory", v.inventory, name="inventory"),
     path("register", v.register, name="register"),
+    path("myitems", v.my_items, name="myitems"),
     path('admin/', admin.site.urls),
     path('', include("django.contrib.auth.urls")),
     path('', include('ims.urls')),

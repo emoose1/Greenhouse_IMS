@@ -1,9 +1,18 @@
+* {
+  font-family: 'Noto Sans JP', sans-serif !important;
+}
+
+body {
+  background-color: #F2F2F2;
+}
+
 header {
   padding-bottom: 3rem;
 }
 
-div.card {
+.div.card {
   display: flex;
+  padding: 20rem;
 }
 
 div.card-header {
@@ -31,6 +40,8 @@ div.card-footer p {
 }
 
 button.btn {
+  max-width: 20%;
+  min-width: 19%;
   font-size: 1.1rem;
   font-weight: bold;
   text-align: center;
@@ -38,10 +49,10 @@ button.btn {
 
 button.btn .bi {
   justify-content: center;
-  height: 2rem;
-  width: 2rem;
+  height: 15%;
+  width: 15%;
 }
 
 form button.btn-outline-danger {
-  align: right;
+  align-items: right;
 }
