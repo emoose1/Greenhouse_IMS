@@ -16,7 +16,7 @@ def inventory(request):
     return render(request, 'ims/inventory.html', context)
 
 # Register for an account
-def register(response):
+def reset_password(response):
     if response.method == "POST":
         form = RegisterForm(response.POST)
         if form.is_valid():
@@ -24,7 +24,7 @@ def register(response):
         return redirect("/login")
     else:
         form = RegisterForm()
-    return render(response, "ims/register.html", {"form":form})
+    return render(response, "ims/reset-password.html", {"form":form})
 
 def my_items(request):
     user = request.user

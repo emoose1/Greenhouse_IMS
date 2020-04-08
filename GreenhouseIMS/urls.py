@@ -21,7 +21,7 @@ from ims import views as v
 urlpatterns = [
     path("home", v.home, name="home"),
     path("inventory", v.inventory, name="inventory"),
-    path("register", v.register, name="register"),
+    path("reset-password", v.reset_password, name="reset-password"),
     path("myitems", v.my_items, name="myitems"),
     path('admin/', admin.site.urls),
     path('', include("django.contrib.auth.urls")),
