@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'qgsd6jg+lo1wtlywz202xq(a69dh^+aq=^1h)&p6yh^n231+q*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['greenhouse-ims.herokuapp.com', '127.0.0.1']
 
