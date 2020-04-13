@@ -59,11 +59,23 @@ div.checking-buttons button {
   text-align: center;
 }
 
+div.checking-buttons button span.button-label {
+  line-height: 80%;
+}
+
 div.checking-buttons button svg {
-  justify-content: center;
-  align-items: center;
   height: 3em;
   width: 2em;
+}
+
+div.checking-buttons button div.button-icons {
+  display: inline;
+}
+
+@media (max-width: 1200px) {
+  div.checking-buttons button div.button-icons {
+    display: none;
+  }
 }
 
 div.list-group button {
@@ -79,7 +91,7 @@ forms button {
 }
 
 div.jumbotron div.landing-page-icon img {
-  align-content: right;
+  align: right;
   width: 5em;
   height: 5em;
 }

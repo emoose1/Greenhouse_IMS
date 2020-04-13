@@ -44,11 +44,15 @@ div.checking-buttons
         max-height: 5em
         font-weight: bold
         text-align: center
+        span.button-label
+            line-height: 80%
         svg
-            justify-content: center
-            align-items: center
             height: 3em
             width: 2em
+        div.button-icons
+            display: inline
+            @media (max-width: 1200px) 
+                display: none
 div.list-group
     button
         margin: .5em 0
