@@ -14,6 +14,7 @@
             
             <div class="card-body">
                 <div class="table-responsive" id="inventoryTable">
+                    {% if item_list %}
                     <table class="table table-striped table-bordered table-hover">
                         <thead class="thead-dark">
                             <tr>
@@ -29,7 +30,7 @@
                                 <th class="text-center" scope="col">Latest Check In</th>
                             </tr>
                         </thead>
-                        {% if item_list %}
+                
                             {% for item in item_list %}
                                 <tbody>
                                     <tr>
@@ -50,7 +51,6 @@
                                         <td>{{ item.item_category }}</td>
                                         <td>{{ item.item_unique_identifier|default_if_none:"" }}</td>
                                         <td>
-                                            
                                                 {{ item.snippetItemSpecs|default_if_none:"" }}
                                                 <span class="badge badge-info" data-toggle="tooltip" data-placement="top" title="{{ item.item_specs }}">
                                                     Expand
@@ -67,11 +67,11 @@
                                     </tr>
                                 
                                 </tbody>
-                            {% endfor %}
-                        {% else %}
-                            <td>Inventory is currently empty</td>
-                        {% endif %}  
+                            {% endfor %} 
                     </table>
+                    {% else %}
+                    <h5>Inventory is currently empty</h5>
+                    {% endif %} 
                 </div>
             </div>
             <div class="card-footer">
