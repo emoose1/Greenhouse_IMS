@@ -1,6 +1,6 @@
 {% extends  "base.html" %}
 {% block title %}Log In{% endblock %}
-
+{% load crispy_forms_tags %}
 {% block content %}
 <div class="container">
     <div class="row justify-content-center">
@@ -10,11 +10,14 @@
                 <form method="POST" class="form-group">
                     {% csrf_token %}
                     {{ form|crispy }}
+                    <a href="{% url 'ims:reset-password' %}">
+                        <p>Forgot your password?</p>
+                    </a>
                     <button type="sumbit" class="btn btn-primary">Log In</button>
                 </form>
             </div>
             <div class="card-footer bg-light text-center">
-                <p>Don't have an account? Create one <a href="{% url 'register' %}">here</a></p>
+                
             </div>
         </div>
     </div>

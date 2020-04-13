@@ -1,41 +1,67 @@
+$base-color: #F3F4F3
+$secondary-color: #228C22
+$theme-dark-color: #191716
+$theme-light-color: #A8C2CA
+$theme-alt-color: #0B2027
+
 *
-    font-family: 'Noto Sans JP', sans-serif !important
-body
-    background-color: #F2F2F2
+    font-family: 'Montserrat', sans-serif
     
+body
+    background-color: $base-color
 header
-    padding-bottom: 3rem
-.div.card
+    padding-bottom: 1em
+    span
+        font-weight: 400
+        color: white
+    li
+        color: white
+        
+div.section
+    margin: 1em 0
+div.inventory-body
     display: flex
     mx-auto
-    padding: 20rem
+    margin-bottom: 10em
 div.card-header
     padding: 1rem
 div.card-body
     padding: 1rem
-    div.checking-buttons
-        display: flex
-        justify-content: space-around
-        align-items: center
-        padding: 1rem 
-        margin: 0 auto
     h5
         padding: 1.5rem 0rem 
-          
 div.card-footer
     p
-        font-weight: bold  
-button.btn
-    max-width: 20%
-    min-width: 19% 
-    font-size: 1.1rem
-    font-weight: bold
-    text-align: center
-    .bi
-        justify-content: center
-        height: 15%
-        width: 15%
-form
-    button.btn-outline-danger
-        align-items: right
+        font-weight: 700
+    div.checking-buttons
+        display: flex
+        justify-content: space-evenly
+        align-items: center
+        padding: 1em 
+        margin: 0 auto
+div.checking-buttons
+    button
+        max-width: 10em
+        max-height: 5em
+        font-weight: bold
+        text-align: center
+        svg
+            justify-content: center
+            align-items: center
+            height: 3em
+            width: 2em
+div.list-group
+    button
+        margin: .5em 0
+div.modal-body
+    width: 75%
+forms
+    button
+        text-align: left
+div.jumbotron
+
+    div.landing-page-icon
+        img
+            align: right
+            width: 5em
+            height: 5em
 

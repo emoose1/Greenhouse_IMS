@@ -1,18 +1,31 @@
 * {
-  font-family: 'Noto Sans JP', sans-serif !important;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  background-color: #F2F2F2;
+  background-color: #F3F4F3;
 }
 
 header {
-  padding-bottom: 3rem;
+  padding-bottom: 1em;
 }
 
-.div.card {
+header span {
+  font-weight: 400;
+  color: white;
+}
+
+header li {
+  color: white;
+}
+
+div.section {
+  margin: 1em 0;
+}
+
+div.inventory-body {
   display: flex;
-  padding: 20rem;
+  margin-bottom: 10em;
 }
 
 div.card-header {
@@ -23,36 +36,50 @@ div.card-body {
   padding: 1rem;
 }
 
-div.card-body div.checking-buttons {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem;
-  margin: 0 auto;
-}
-
 div.card-body h5 {
   padding: 1.5rem 0rem;
 }
 
 div.card-footer p {
-  font-weight: bold;
+  font-weight: 700;
 }
 
-button.btn {
-  max-width: 20%;
-  min-width: 19%;
-  font-size: 1.1rem;
+div.card-footer div.checking-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+div.checking-buttons button {
+  max-width: 10em;
+  max-height: 5em;
   font-weight: bold;
   text-align: center;
 }
 
-button.btn .bi {
+div.checking-buttons button svg {
   justify-content: center;
-  height: 15%;
-  width: 15%;
+  align-items: center;
+  height: 3em;
+  width: 2em;
 }
 
-form button.btn-outline-danger {
-  align-items: right;
+div.list-group button {
+  margin: .5em 0;
+}
+
+div.modal-body {
+  width: 75%;
+}
+
+forms button {
+  text-align: left;
+}
+
+div.jumbotron div.landing-page-icon img {
+  align-content: right;
+  width: 5em;
+  height: 5em;
 }

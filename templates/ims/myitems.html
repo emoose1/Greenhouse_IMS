@@ -2,7 +2,7 @@
 {% block title %}My Items{% endblock %}
 {% block content %}
     <div class="section">
-        <h5>Current Items Checked Out By: <h3>{{ user }}</h3></h5>
+        <h4>Current Items Checked Out By: <br>{{ user.first_name }} {{ user.last_name }}</h4>
     </div>
     <div class="accordion " id="myItemListAccordion">
         {% if my_item_list %}
@@ -12,18 +12,19 @@
                         <p class="mb-0">
                             {{ item.item_name }}
                         </p>
-                            <button class="btn-outline-primary rounded-pill float-right" type="button" data-toggle="collapse" data-target="#detailCollapse" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="btn-outline-primary rounded-pill float-right" type="button" data-toggle="collapse" data-target="#detailCollapse{{item.id}}" aria-expanded="true" aria-controls="collapseOne">
                                 <svg class="bi bi-chevron-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
                                 </svg>
                             </button>
                     </div> 
-                    <div id="detailCollapse" class="collapse" aria-labelledby="myItemListHeading" data-parent="#myItemListAccordion">
+                    <div id="detailCollapse{{item.id}}" class="collapse" aria-labelledby="myItemListHeading" data-parent="#myItemListAccordion">
                         <div class="card-body">
                             <ul class="list-group striped">
                                 <li class="list-group-item">Item ID#: {{ item.id }}</li>
                                 <li class="list-group-item">Category: {{ item.item_category }}</li>
                                 <li class="list-group-item">Serial/UID: {{ item.item_unique_identifier|default_if_none:"" }}</li>
+                                <li class="list-group-item">Item Specs: {{ item.item_specs|default_if_none:"" }}</li>
                                 <li class="list-group-item">Check Out Date: {{ item.checked_out_date|date:"n/j/Y h:i A" }}</li>
 
                             </ul>
