@@ -112,6 +112,12 @@ div.jumbotron {
 }
 
 div.jumbotron div.jumbotron-home-header h1.home-heading {
-  font-size: 5em;
+  font-size: 4.5em;
   padding: .5em 0;
+}
+
+@media (max-width: 900px) {
+  div.jumbotron div.jumbotron-home-header h1.home-heading {
+    font-size: 3.5em;
+  }
 }
