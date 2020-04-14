@@ -15,14 +15,14 @@ header
         font-weight: 400
         color: white
     li
-        color: white
-        
+        color: white   
 div.section
     margin: 1em 0
+span.bold-font
+    font-weight: 700
 div.inventory-body
     display: flex
-    mx-auto
-    margin-bottom: 10em
+    margin-bottom: 8em
 div.card-header
     padding: 1rem
 div.card-body
@@ -32,13 +32,13 @@ div.card-body
 div.card-footer
     p
         font-weight: 700
-    div.checking-buttons
-        display: flex
-        justify-content: space-evenly
-        align-items: center
-        padding: 1em 
-        margin: 0 auto
 div.checking-buttons
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 90%
+    padding: 1em 
+    margin: 0 auto
     button
         max-width: 10em
         max-height: 5em
@@ -53,19 +53,27 @@ div.checking-buttons
             display: inline
             @media (max-width: 1200px) 
                 display: none
+#myItemListHeading
+    p
+        font-weight: 700
 div.list-group
-    button
-        margin: .5em 0
+    width: max-content
+    a
+        margin: .7em 0
 div.modal-body
     width: 75%
+
 forms
     button
         text-align: left
 div.jumbotron
-
-    div.landing-page-icon
-        img
-            align: right
-            width: 5em
-            height: 5em
-
+    border: .075em solid
+    background-image: url('../imgs/opaque.svg')
+    background-position: center
+    background-size: 27em
+    background-repeat: no-repeat
+    div.jumbotron-home-header
+        h1.home-heading
+            font-size: 5em
+            padding: .5em 0
+        

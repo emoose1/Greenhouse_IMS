@@ -23,9 +23,13 @@ div.section {
   margin: 1em 0;
 }
 
+span.bold-font {
+  font-weight: 700;
+}
+
 div.inventory-body {
   display: flex;
-  margin-bottom: 10em;
+  margin-bottom: 8em;
 }
 
 div.card-header {
@@ -44,10 +48,11 @@ div.card-footer p {
   font-weight: 700;
 }
 
-div.card-footer div.checking-buttons {
+div.checking-buttons {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  width: 90%;
   padding: 1em;
   margin: 0 auto;
 }
@@ -78,8 +83,16 @@ div.checking-buttons button div.button-icons {
   }
 }
 
-div.list-group button {
-  margin: .5em 0;
+#myItemListHeading p {
+  font-weight: 700;
+}
+
+div.list-group {
+  width: max-content;
+}
+
+div.list-group a {
+  margin: .7em 0;
 }
 
 div.modal-body {
@@ -90,8 +103,15 @@ forms button {
   text-align: left;
 }
 
-div.jumbotron div.landing-page-icon img {
-  align: right;
-  width: 5em;
-  height: 5em;
+div.jumbotron {
+  border: .075em solid;
+  background-image: url("../imgs/opaque.svg");
+  background-position: center;
+  background-size: 27em;
+  background-repeat: no-repeat;
+}
+
+div.jumbotron div.jumbotron-home-header h1.home-heading {
+  font-size: 5em;
+  padding: .5em 0;
 }
