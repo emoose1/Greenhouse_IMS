@@ -1,4 +1,4 @@
-$base-color: #F3F4F3
+$base-color: #1D1D1D
 $secondary-color: #228C22
 $theme-dark-color: #191716
 $theme-light-color: #A8C2CA
@@ -6,18 +6,44 @@ $theme-alt-color: #0B2027
 
 *
     font-family: 'Montserrat', sans-serif
-    
+html
+    height: 100%
 body
     background-color: $base-color
+    background: linear-gradient(25deg, rgba(29,29,29,1) 59%, rgba(11,110,79,1) 95%)
+    background-repeat: no-repeat
+    background-attachment: fixed
+    height: 100%
+    padding-bottom: 2rem
 header
     padding-bottom: 1em
     span
         font-weight: 400
         color: white
     li
-        color: white   
+        color: white
+footer
+    position: relative
+    bottom: 0
+    right: 0
+    left: 0
+    height: 30%
+    text-align: end
+    div.footer-div
+        bottom: .5rem
+        right: 1rem
+        position: absolute
+        img
+            z-index: -1
+            width: 100%
+.navbar-custom
+    background-color: #111111
+.navbar-custom .navbar-brand, .navbar-custom .navbar-text, .navbar-custom .nav-link
+    color: white
+
 div.section
     margin: 1em 0
+    color: white
 span.bold-font
     font-weight: 700
 div.inventory-body
@@ -66,17 +92,34 @@ div.modal-body
 forms
     button
         text-align: left
-div.jumbotron
-    border: .075em solid
-    background-image: url('../imgs/opaque.svg')
-    background-position: center
-    background-size: 27em
-    background-repeat: no-repeat
-    div.jumbotron-home-header
-        overflow:scroll
-        h1.home-heading
-            font-size: 4.5em
-            @media (max-width: 900px)
-                font-size: 3.5em
-            padding: .5em 0
+
+div.home-div
+    display: flex
+    flex-direction: column
+    @media (min-height: 1365px) 
+                margin-top: 12rem
+    width: 100%
+    color: white
+    h1
+        font-size: 3.5rem
+        justify-content: start
+        margin: 15rem 0 5rem
+        @media (max-width: 1024px) 
+                margin: 7rem 0 3rem
+    h3,h4,h5
+        text-align: center
+        margin-bottom: 5rem
+    div.home-button-div
+        display: flex
+        flex-flow: column
+        align-items: center
+        justify-content: center
+        margin: 1rem 0
+        button
+            padding: .2rem
+            margin-bottom: 1rem
+
+
+
+
         

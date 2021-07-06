@@ -1,0 +1,82 @@
+$base-color: #F3F4F3
+$secondary-color: #228C22
+$theme-dark-color: #191716
+$theme-light-color: #A8C2CA
+$theme-alt-color: #0B2027
+
+*
+    font-family: 'Montserrat', sans-serif
+    
+body
+    background-color: $base-color
+header
+    padding-bottom: 1em
+    span
+        font-weight: 400
+        color: white
+    li
+        color: white   
+div.section
+    margin: 1em 0
+span.bold-font
+    font-weight: 700
+div.inventory-body
+    display: flex
+    margin-bottom: 8em
+div.card-header
+    padding: 1rem
+div.card-body
+    padding: 1rem
+    h5
+        padding: 1.5rem 0rem 
+div.card-footer
+    p
+        font-weight: 700
+div.checking-buttons
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 90%
+    padding: 1em 
+    margin: 0 auto
+    button
+        max-width: 10em
+        max-height: 5em
+        font-weight: bold
+        text-align: center
+        span.button-label
+            line-height: 80%
+        svg
+            height: 3em
+            width: 2em
+        div.button-icons
+            display: inline
+            @media (max-width: 1200px) 
+                display: none
+#myItemListHeading
+    p
+        font-weight: 700
+div.list-group
+    width: max-content
+    a
+        margin: .7em 0
+div.modal-body
+    width: 75%
+
+forms
+    button
+        text-align: left
+div.jumbotron
+    border: .075em solid
+    background-image: url('../imgs/opaque.svg')
+    background-position: center
+    background-size: 27em
+    background-repeat: no-repeat
+    div.jumbotron-home-header
+        overflow:scroll
+        h1.home-heading
+            font-size: 4.5em
+            @media (max-width: 900px)
+                font-size: 3.5em
+            padding: .5em 0
+        

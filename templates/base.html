@@ -28,7 +28,7 @@
     <title>Greenhouse IMS: {% block title %}{% endblock %}</title>
   </head>
   <header>
-    <nav id="main-menu" class="navbar navbar-dark navbar-expand-md bg-dark ">
+    <nav id="main-menu" class="navbar navbar-custom navbar-expand-md ">
       <a class="navbar-brand abs" >
         <img src="{% static "imgs/logo-white.svg" %}" width="35" height="35" 
         class="d-inline-block align-bottom" alt="Greenhouse Logo">
@@ -138,11 +138,21 @@
       </div>
     </nav>
   </header>
+
   <body>
     <div class="container-xl"> 
         {% block content %} 
           
         {% endblock %}
     </div>
+
+    <footer>
+      <div class="footer-div">
+        <img src="{% static "imgs/logo-white.svg" %}" alt="Greenhouse Logo">
+      </div>
+    </footer>
+    {% block js %}
+
+    {% endblock js %}
   </body>
 </html>

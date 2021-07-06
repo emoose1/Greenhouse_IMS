@@ -48,8 +48,8 @@ def logoutUser(request):
 
 @login_required(login_url='login')
 def my_items(request):
-    user = request.user
-    my_item_list = Item.objects.filter(checked_to = user)
+    my_user = request.user
+    my_item_list = Item.objects.filter(checked_to = my_user)
     context = {'my_item_list': my_item_list,}
     
     return render(request, 'ims/myitems.html', context)
@@ -57,7 +57,12 @@ def my_items(request):
 
 @login_required(login_url='login')
 def checkIn(request):
-    instance = Item
-    instance.checked_to = instance.checked_to(User="")
-    instance.save()
-    return 
+    item_instance = Item
+    item_instance.checked_to = item_instance.checked_to(user=request.user)
+    item_instance.save()
+    return
+
+@login_required()
+def add_to_checkOut(request, **kwargs):
+    
+    return

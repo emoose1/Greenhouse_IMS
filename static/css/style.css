@@ -2,8 +2,17 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  background-color: #F3F4F3;
+  background-color: #1D1D1D;
+  background: linear-gradient(25deg, #1d1d1d 59%, #0b6e4f 95%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  padding-bottom: 2rem;
 }
 
 header {
@@ -19,8 +28,37 @@ header li {
   color: white;
 }
 
+footer {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 30%;
+  text-align: end;
+}
+
+footer div.footer-div {
+  bottom: .5rem;
+  right: 1rem;
+  position: absolute;
+}
+
+footer div.footer-div img {
+  z-index: -1;
+  width: 100%;
+}
+
+.navbar-custom {
+  background-color: #111111;
+}
+
+.navbar-custom .navbar-brand, .navbar-custom .navbar-text, .navbar-custom .nav-link {
+  color: white;
+}
+
 div.section {
   margin: 1em 0;
+  color: white;
 }
 
 span.bold-font {
@@ -103,21 +141,45 @@ forms button {
   text-align: left;
 }
 
-div.jumbotron {
-  border: .075em solid;
-  background-image: url("../imgs/opaque.svg");
-  background-position: center;
-  background-size: 27em;
-  background-repeat: no-repeat;
+div.home-div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: white;
 }
 
-div.jumbotron div.jumbotron-home-header h1.home-heading {
-  font-size: 4.5em;
-  padding: .5em 0;
-}
-
-@media (max-width: 900px) {
-  div.jumbotron div.jumbotron-home-header h1.home-heading {
-    font-size: 3.5em;
+@media (min-height: 1365px) {
+  div.home-div {
+    margin-top: 12rem;
   }
+}
+
+div.home-div h1 {
+  font-size: 3.5rem;
+  justify-content: start;
+  margin: 15rem 0 5rem;
+}
+
+@media (max-width: 1024px) {
+  div.home-div h1 {
+    margin: 7rem 0 3rem;
+  }
+}
+
+div.home-div h3, div.home-div h4, div.home-div h5 {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+div.home-div div.home-button-div {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+div.home-div div.home-button-div button {
+  padding: .2rem;
+  margin-bottom: 1rem;
 }
