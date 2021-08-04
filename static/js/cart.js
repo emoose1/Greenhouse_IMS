@@ -1,4 +1,4 @@
-let cart = [];
+var cart = [];
 console.log("Yo")
 $(document).ready( function () {
     inventory_DT = $('#inv_table').DataTable({
@@ -17,10 +17,11 @@ $(document).ready( function () {
         );
     
     inventory_DT.on( 'select' , function () {
-        var rowData = inventory_DT.rows( { selected: true } ).data()[0];
-        // now do what you need to do wht the row data
-        cart.push(rowData)
-        $('#checkedItems').append('<li> rowData[1] </li>')
-        console.table(cart);
+        var cart = [];
+        inventory_DT.rows( { selected: true } ).every(function(rowIdx) {
+            cart.push({itemID: inventory_DT.row(rowIdx).data()[1], name: inventory_DT.row(rowIdx).data()[3]})
+        })
+        console.log('cart', cart)
+
     } );        
 } );
