@@ -10,7 +10,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
@@ -24,13 +24,13 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" 
       crossorigin="anonymous">
     </script>
-    <link rel="shortcut icon" href="{% static "imgs/logo-white.svg" %}" type="image/svg">
+    <link rel="shortcut icon" href="{% static 'imgs/logo-white.svg' %}" type="image/svg">
     <title>Greenhouse IMS: {% block title %}{% endblock %}</title>
   </head>
   <header>
     <nav id="main-menu" class="navbar navbar-custom navbar-expand-md ">
       <a class="navbar-brand abs" >
-        <img src="{% static "imgs/logo-white.svg" %}" width="35" height="35" 
+        <img src="{% static 'imgs/logo-white.svg' %}" width="35" height="35" 
         class="d-inline-block align-bottom" alt="Greenhouse Logo">
         <span>Greenhouse</span>
       </a>
@@ -148,11 +148,15 @@
 
     <footer>
       <div class="footer-div">
-        <img src="{% static "imgs/logo-white.svg" %}" alt="Greenhouse Logo">
+        <img src="{% static 'imgs/logo-white.svg' %}" alt="Greenhouse Logo">
       </div>
     </footer>
-    {% block js %}
 
-    {% endblock js %}
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.3.1/jszip-2.5.0/dt-1.10.21/af-2.3.5/b-1.6.2/b-colvis-1.6.2/b-html5-1.6.2/b-print-1.6.2/cr-1.5.2/fc-3.3.1/kt-2.5.2/r-2.2.4/rg-1.1.2/rr-1.2.7/sc-2.0.2/sp-1.1.0/sl-1.3.1/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jq-3.3.1/jszip-2.5.0/dt-1.10.21/af-2.3.5/b-1.6.2/b-colvis-1.6.2/b-html5-1.6.2/b-print-1.6.2/cr-1.5.2/fc-3.3.1/kt-2.5.2/r-2.2.4/rg-1.1.2/rr-1.2.7/sc-2.0.2/sp-1.1.0/sl-1.3.1/datatables.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
+    
   </body>
 </html>
