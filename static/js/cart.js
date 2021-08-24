@@ -40,12 +40,6 @@ function sortCart(cartArray){
 
 $(document).ready( function () {
     inventory_DT = $('#inv_table').DataTable({
-        // "processing": true,
-        // "serverSide": true,
-        // "ajax": {
-        //     "url": "/api/music/",
-        //     "type": "GET"
-        // },
         columnDefs: [ {
             orderable: false,
             className: 'select-checkbox',
@@ -53,7 +47,7 @@ $(document).ready( function () {
         } ],
         select: {
             style: 'multi',
-            selector: 'td:first-child',
+            
         },
         order: [[ 1, 'asc' ]],
         dom: 'B<"clear">lfrtip',
@@ -80,14 +74,14 @@ $(document).ready( function () {
     $('#checkOutToCartButton').click( function(){
         var myCart = sortCart(cart)
         myCart.map( item => {
-            console.log('TESTING MODAL FUNCTION ', item.id, item.name )
-            $('#checkedItemName').text(item.name)
-            $('#checkedItemID').text(item.id)
+            console.log('TESTING MODAL FUNCTION id/name: ', item.id, item.name )
+            $('#checkedItemName').text(item.name);
+            $('#checkedItemID').text(item.id);
         })
-        $.each(cart, function)
+        $.each(cart, function(){
         console.table('SORTED CART TABLE' , sortCart(cart))
+        })
     })
-
 
 
     

@@ -36,18 +36,18 @@
                                                     {% if item.item_availability == 'yes' %}
                                                         <td id="item_selector" class="chkbx" value={{item.id}}></td>
                                                     {% elif item.item_availability == 'no' and item.checked_to == user %}
-                                                        <td id="item_selector" class="chkbx" ><span class="badge badge-pill badge-secondary">My Item</span></td>
+                                                        <td></td>
                                                     {% else %}
-                                                        <td id="item_selector" class="chkbx" ><span class="badge badge-pill badge-secondary">No</span></td>
+                                                        <td></td>
                                                     {% endif %}
                                                 <td >{{ item.id }}</td>
 
                                                 {% if item.item_availability == 'yes' %}
-                                                    <td><span class="badge badge-pill badge-success">Yes</span></td>
+                                                    <td><span class="badge badge-pill bg-success">Yes</span></td>
                                                 {% elif item.item_availability == 'no' and item.checked_to == user %}
-                                                    <td><span class="badge badge-pill badge-secondary">My Item</span></td>
+                                                    <td><span class="badge badge-pill bg-secondary">My Item</span></td>
                                                 {% else %}
-                                                    <td><span class="badge badge-pill badge-danger">No</span></td>
+                                                    <td><span class="badge badge-pill bg-danger">No</span></td>
                                                 {% endif %}
 
                                                 <td>{{ item.item_name }}</td>
@@ -70,21 +70,6 @@
                                             </tr>
                                             {% endfor %}
                                     </tbody>
-            
-                                    <tfoot>
-                                        <tr>
-                                            <th style="width: 5%"></th>
-                                            <th class="text-center" scope="col" style="width: 8%">Item #</th>
-                                            <th class="text-center" scope="col" style="width: 6%">Available?</th>
-                                            <th class="text-center" scope="col" style="width: 13%">Name</th>
-                                            <th class="text-center" scope="col" style="width: 11%">Category</th>
-                                            <th class="text-center" scope="col" style="width: 11%">Unique ID</th>
-                                            <th class="text-center" scope="col" style="width: 11%">Item Specs</th>
-                                            <th class="text-center" scope="col" style="width: 11%">Checked To</th>
-                                            <th class="text-center" scope="col">Latest Check Out</th>
-                                            <th class="text-center" scope="col">Latest Check In</th>
-                                        </tr>
-                                    </tfoot> 
                             </table>
                     </div>
                 </div>
@@ -124,7 +109,7 @@
                             </div>
                         </div>
 
-                        <button id="checkOutToCartButton"class="btn btn-success rounded col-2 float-right" data-toggle="modal" data-target="#CheckOutModal">
+                        <button id="checkOutToCartButton" class="btn btn-success rounded col-2 float-right" data-bs-toggle="modal" data-bs-target="#CheckOutModal">
                             <span class="button-label">
                                 Check Out  
                             </span>
@@ -149,9 +134,9 @@
                                     {{ form|crispy }}
                                     <div class="modal-body">
                                         <span class="checkedItemInfo">
-                                            <strong>Item Name: </strong><span class="checkedItemInfo" id="checkedItemName"><li></li></span>
-                                            <strong>Item ID: </strong><span class="checkedItemInfo" id="checkedItemID"><li></li></span>
-                                        </li>
+                                            <strong>Item Name: </strong><span id="checkedItemName"></span>
+                                            <strong>Item ID: </strong><span id="checkedItemID"></span>
+                                        </span>
                                     </div>
                                     <div class="modal-footer">
                                         <div class="checking-buttons">

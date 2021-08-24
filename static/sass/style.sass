@@ -1,20 +1,102 @@
+// Colors
 $base-color: #1D1D1D
+$background-primary-color: #FBFBFB
+$background-accent-color: #13B447ED
+$font-primary-color: #111111
 $secondary-color: #228C22
 $theme-dark-color: #191716
-$theme-light-color: #A8C2CA
+$theme-light-color: #b3b3b3
 $theme-alt-color: #0B2027
 
-*
-    font-family: 'Montserrat', sans-serif
+// Font Sizes
+$fz-xs: clamp(10px, 1.5vw, 15px)
+$fz-sm: clamp(12px, 1.5vw, 14px)
+$fz-md: clamp(15px, 1.5vw, 18px)
+$fz-lg: clamp(19px, 1.5vw, 23px)
+$fz-xl: clamp(22px, 2vw, 26px)
+$fz-xxl: clamp(25px, 2vw, 32px)
+$fz-3xl: clamp(35px, 3vw, 45px)
+$fz-subheading: clamp(40px, 3vw, 50px)
+$fz-heading: clamp(50px, 5vw, 80px)
+
+//Fonts
+$base-font: $fz-lg Raleway, sans-serif
+$thin-base-font: lighter $fz-lg Raleway, sans-serif
+$bold-base-font: bold $fz-lg Raleway, sans-serif
+
+
+// Base Style
 html
     height: 100%
 body
-    background-color: $base-color
-    background: linear-gradient(25deg, rgba(29,29,29,1) 59%, rgba(11,110,79,1) 95%)
+    background-color: $background-primary-color
+    background-image: url('../imgs/hexagon-background.svg')
     background-repeat: no-repeat
     background-attachment: fixed
     height: 100%
     padding-bottom: 2rem
+    font: $base-font
+h1
+    font-size: $fz-heading
+h2
+    font-size: $fz-subheading
+h3
+    font-size: $fz-3xl
+p
+    font-size: $fz-lg
+
+
+// Landing Page Style
+div.landing-page
+    display: flex
+    flex-direction: column
+    @media (min-height: 1365px) 
+        margin-top: 12rem
+    width: 100%
+    color: $font-primary-color
+    h1
+        font-size: $fz-heading
+        justify-content: start
+        margin: 15rem 0 5rem
+        @media (max-width: 1024px) 
+            margin: 7rem 0 3rem
+    h3
+        text-align: center
+        margin-bottom: 5rem
+    div.home-buttons
+        align-items: center
+        justify-content: center
+        margin: 1rem 0
+        button
+            padding: .2rem
+            margin-bottom: 1rem
+
+// Inventory Page Style
+div.checking-buttons
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 90%
+    padding: 1em 
+    margin: 0 auto
+    button
+        max-width: 10em
+        max-height: 5em
+        font-weight: bold
+        text-align: center
+        span.button-label
+            line-height: 80%
+        svg
+            height: 3em
+            width: 2em
+        div.button-icons
+            display: inline
+            @media (max-width: 1200px) 
+                display: none
+
+// My Items Page Style
+
+
 header
     padding-bottom: 1em
     span
@@ -22,20 +104,8 @@ header
         color: white
     li
         color: white
-footer
-    position: relative
-    bottom: 0
-    right: 0
-    left: 0
-    height: 30%
-    text-align: end
-    div.footer-div
-        bottom: .5rem
-        right: 1rem
-        position: absolute
-        img
-            z-index: -1
-            width: 100%
+.navbar
+    justify-content: flex-end
 .navbar-custom
     background-color: #111111
 .navbar-custom .navbar-brand, .navbar-custom .navbar-text, .navbar-custom .nav-link
@@ -58,30 +128,7 @@ div.card-body
 div.card-footer
     p
         font-weight: 700
-div.checking-buttons
-    display: flex
-    justify-content: space-between
-    align-items: center
-    width: 90%
-    padding: 1em 
-    margin: 0 auto
-    button
-        max-width: 10em
-        max-height: 5em
-        font-weight: bold
-        text-align: center
-        span.button-label
-            line-height: 80%
-        svg
-            height: 3em
-            width: 2em
-        div.button-icons
-            display: inline
-            @media (max-width: 1200px) 
-                display: none
-#myItemListHeading
-    p
-        font-weight: 700
+
 div.list-group
     width: max-content
     a
@@ -89,35 +136,9 @@ div.list-group
 div.modal-body
     width: 75%
 
-forms
+form
     button
         text-align: left
-
-div.home-div
-    display: flex
-    flex-direction: column
-    @media (min-height: 1365px) 
-                margin-top: 12rem
-    width: 100%
-    color: white
-    h1
-        font-size: 3.5rem
-        justify-content: start
-        margin: 15rem 0 5rem
-        @media (max-width: 1024px) 
-                margin: 7rem 0 3rem
-    h3,h4,h5
-        text-align: center
-        margin-bottom: 5rem
-    div.home-button-div
-        display: flex
-        flex-flow: column
-        align-items: center
-        justify-content: center
-        margin: 1rem 0
-        button
-            padding: .2rem
-            margin-bottom: 1rem
 
 
 
