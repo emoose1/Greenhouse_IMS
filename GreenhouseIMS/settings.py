@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'ims.apps.ImsConfig',
     'crispy_forms',
     'rest_framework',
-    'livereload',
+    "django_browser_reload",
     'django_sass',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -66,6 +66,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
     
 ]
 
