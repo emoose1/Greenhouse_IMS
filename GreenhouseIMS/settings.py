@@ -46,6 +46,8 @@ LOGOUT_REDIRECT_URL = "/login"
 INSTALLED_APPS = [
     'ims.apps.ImsConfig',
     'crispy_forms',
+    'rest_framework',
+    'livereload',
     'django_sass',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -53,7 +55,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -96,7 +97,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ghdb',
-        'USER': 'postgres',
+        'USER': 'root',
         'PASSWORD': 'admin123',
         'HOST': 'localhost',
         'PORT': '5432',
